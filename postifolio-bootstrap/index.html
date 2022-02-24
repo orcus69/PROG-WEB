@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <style>
+    :root {
+      --dark-one: #333;
+      --dark-two: #7a7a7a;
+      --main-color: #679a85;
+      --light-one: #fff;
+      --light-two: #f9fafb;
+      --light-three: #f6f7fb;
+    }
+    .mainTextColor{
+      color: var(--main-color);
+      
+    }
+    .naveTextColor{
+      color: var(--dark-one);
+    }
+    .buttonColor{
+      background-color: var(--main-color);;
+    }
+  </style>
+  <title>Document</title>
+</head>
+<body class="bg-light">
+  <nav class="navbar navbar-light bg-light shadow-sm fixed-top">
+    <div class="container-lg">
+      <a class="navbar-brand fw-bold fs-4 fw-bold fs-4" href="#">
+        <i class="fas fa-code me-2 mainTextColor"></i> 
+        Josué Santos
+      </a>
+
+      <ul class="nav nav-pills justify-content-end">
+        
+        <li class="nav-item">
+          <a class="nav-link naveTextColor" href="#about">Sobre</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link naveTextColor" href="#services">Serviços</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link naveTextColor" href="#portifolio">Portifólio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white fw-bold buttonColor" href="#home">Home</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="home py-5" id="home">
+    <div class="container-lg">
+      <div class="row min-vh-100 align-items-center align-content-center">
+        <div class="col-md-6 mt-5 mt-md-0">
+          <div class="home-img text-center">
+            <img class="rounded-circle mw100" width="400px" src="img/eu.png" alt="foto de perfil">
+          </div>
+        </div>
+        <div class="col-md-6 mt-5 mt-md-0 order-md-first">
+          <div class="home-text">
+            <p class="fs-4 text-muted mb-1"> Olá, Eu sou </p>
+            <h2 class="naveTextColor fw-bold fs-4">Josué Santos,</h2> 
+            <p class="text-muted mt-4">Natural de Codó-MA. Tenho 22 anos e moro em Caxias-MA. Desenvolvedor flutter e entusiasta tecnologias blockchain. 
+            </p>
+            <a class="btn px-3 mt-3 buttonColor text-white fw-bold">Baixar CV</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about py-5" id="about">
+    <div class="container-lg py-4">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="section-title text-center">
+            <h2 class="fw-bold mb-5">Sobre mim</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+
+        <div class="col-md-6 ">
+          <div class="about-text">
+            <h3 class="fs-4 mb-3">Desenvolvedor flutter</h3>
+            <p class="text-muted">Apaixonado por desenvolvimento mobile e entusiasta de tecnologias baseadas em blockcain.</p>
+          </div>
+
+          <div class="row text-center text-uppercase my-3">
+            <div class="col-sm-4">
+              <div class="fact-item">
+                <h4 class="fs-1 fw-bold">4</h4>
+                <p class="text-muted">Projetos Desenvolvidos</p>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="fact-item">
+                <h4 class="fs-1 fw-bold">1</h4>
+                <p class="text-muted">Artigos Publicados</p>
+              </div>
+            </div>
+            
+          </div>
+
+          <div class="row">
+            <div class="col-lg-12 align-items-center  mb-4">
+              <div class="social-links">
+                <a class="text-dark me-4" href="https://www.facebook.com/j.santosk8"><i class="fab fa-facebook fs-2"></i></a>
+                <a class="text-dark me-4" href="https://github.com/orcus69/"><i class="fab fa-github fs-2"></i></a>
+                <a class="text-dark me-4" href="https://www.linkedin.com/in/josuessantos/"><i class="fab fa-linkedin-in fs-2"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 order-md-first mb-4">
+          <div class="home-img text-center">
+            <img class="rounded-circle mw100" width="320px" src="img/eu.png" alt="foto de perfil">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="services py-5" id="services">
+    <div class="container-lg py-4">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="section-title text-center">
+            <h2 class="fw-bold mb-5">Serviços</h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="row text-center">
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="service-item shadow-sm p-4 rounded bg-white">
+            <div class="icon my-3 fs-2 mainTextColor">
+              <i class="fas fa-code"></i>
+            </div>
+            <h3 class="fs-5 py-2">Desenvolvimento de Sites</h3>
+            <p class="text-muted">Desenvolvimento de sites web utilizando HTML CSS e Bootstrap</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="service-item shadow-sm p-4 rounded bg-white">
+            <div class="icon my-3 fs-2 mainTextColor">
+              <i class="fas fa-code"></i>
+            </div>
+            <h3 class="fs-5 py-2">Desenvolvimento de Aplicativos</h3>
+            <p class="text-muted">Desenvolvimento de aplicativos para android e IOS</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="service-item shadow-sm p-4 rounded bg-white">
+            <div class="icon my-3 fs-2 mainTextColor">
+              <i class="fas fa-lightbulb"></i>
+            </div>
+            <h3 class="fs-5 py-2">UI Design</h3>
+            <p class="text-muted">Desenvolvimento telas para aplicativos e sites</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="portifolio py-5" id="portifolio">
+    <div class="container-lg py-4">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="section-title text-center">
+            <h2 class="fw-bold mb-5">Portifólio</h2>
+          </div>
+        </div>
+      </div>´
+
+      <div class="row">
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="portifolio-item shadow-sm p-4 rounded bg-white">
+            <img src="img/portfolio/3.png" class="w-100 img-thumbnail">
+            <h3 class="text-capitalize fs-5 my-2">SADI</h3>
+            <p class="text-muted">Sistema de Acompanhamento do Discendo</p>
+            <p class="mb-4"><a class="text-decoration-none mainTextColor" href="https://github.com/orcus69/sisAcomp"><i class="text-dark fab fa-github me-2"></i>Github</a></p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="portifolio-item shadow-sm p-4 rounded bg-white">
+            <img src="img/portfolio/1.png" class="w-100 img-thumbnail">
+            <h3 class="text-capitalize fs-5 my-2">Lightning Loterry</h3>
+            <p class="text-muted">Loteria baseadas na Lightning Network</p>
+            <p class="mb-4"><a class="text-decoration-none mainTextColor" href="https://github.com/orcus69/lightning_lotery"><i class="text-dark fab fa-github me-2"></i>Github</a></p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="portifolio-item shadow-sm p-4 rounded bg-white">
+            <img src="img/portfolio/2.png" class="w-100 img-thumbnail">
+            <h3 class="text-capitalize fs-5 my-2">Human Talk</h3>
+            <p class="text-muted">Rede social baseada no tumblr</p>
+            <p class="mb-4"><a class="text-decoration-none mainTextColor" href="https://github.com/orcus69/humanTalk-Flutter"><i class="text-dark fab fa-github me-2"></i>Github</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer border-top py-4" id="footer ">
+    <div class="container-lg">
+      <div class="row">
+        <div class="col-lg-12">
+          <p class="m-0 text-center text-muted">Copyright &copy; 2022 Todos os direitos reservados | <a class="text-dark me-4 text-decoration-none" href="https://www.linkedin.com/in/josuessantos/">Josué Santos</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+<script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
