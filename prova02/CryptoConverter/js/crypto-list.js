@@ -1,6 +1,6 @@
 let crypto_code = {
     "BTC": "BTC",
     "ETH": "ETH",
-    "USDT": "USDT",
+    "USD": "USDT",
     "BRL" : "BRL"
 }

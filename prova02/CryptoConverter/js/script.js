@@ -7,7 +7,7 @@ for(let i = 0; i < dropList.length; i++){
     for(currency_code in crypto_code){
         let selected;
         if(i == 0){
-            selected = currency_code == "USDT" ? "selected" : ""
+            selected = currency_code == "USD" ? "selected" : ""
         }else if(i == 1){
             selected = currency_code == "BTC" ? "selected" : ""
         }
@@ -26,7 +26,7 @@ function loadFlag(element){
     for(code in crypto_code){
         if(code == element.value){
             let imgTag = element.parentElement.querySelector("img");
-            imgTag.src = `img/flags/${crypto_code[code]}.svg`
+            imgTag.src = `./img/flags/${crypto_code[code]}.png`
         }
     }
 }
@@ -62,13 +62,51 @@ function getExchangeRate(){
     }
     
 
-    let url = `http://rest.coinapi.io/v1/exchangerate/${fromCurrency.value}/${toCurrency.value}`;
+    let url = `https://api.coingecko.com/api/v3/exchange_rates`;
 
-    fetch(url, {
-        "headers": {'X-CoinAPI-Key': '13B68BC3-DE8D-45DE-8E60-074AA43A3BFF'}
-      }).then(response => response.json()).then(result => {
+    fetch(url).then(response => response.json()).then(result => {
+        let toValueRate = result['rates'][toCurrency.value.toLowerCase()]['value'];
+        let fromValueRate = result['rates'][fromCurrency.value.toLowerCase()]['value'];
+        let fromValue = fromCurrency.value
+        let toValue = toCurrency.value
+
+        //Calcula preço do dolar em real
+        let dolarPrice = result['rates']['brl']['value']/result['rates']['usd']['value'];
+
+        console.log("Dolar: R$"+fromValue)
+
+        if(fromValue == 'BTC'){
+            exchangeRateTxt.innerText = `${amountValue} ${fromValue} = ${toValueRate * amountValue} ${toValue}`
+        }else if(fromValue == 'ETH' && toValue == 'USD'){
+            exchangeRateTxt.innerText = `${amountValue} ${fromValue} = ${( result['rates']['usd']['value']/ fromValueRate) * amountValue} ${toValue}`
+        }else if(fromValue == 'ETH' && toValue == 'BRL'){
+            exchangeRateTxt.innerText = `${amountValue} ${fromValue} = ${( result['rates']['brl']['value']/ fromValueRate) * amountValue} ${toValue}`
+        }else if(fromValue == 'ETH' && toValue == 'ETH'){
+            exchangeRateTxt.innerText = `${amountValue} ${fromValue} = ${ amountValue} ${toValue}`
+        }else if(fromValue == 'ETH' && toValue == 'BTC'){
+            exchangeRateTxt.innerText = `${amountValue} ${fromValue} = ${( result['rates']['btc']['value']/ fromValueRate) * amountValue} ${toValue}`
+        }else if(fromValue == 'USD' && toValue == 'BTC'){
+            exchangeRateTxt.innerText = `${amountValue} ${fromValue} = ${( result['rates']['btc']['value']/ fromValueRate) * amountValue} ${toValue}`
+        }else if(fromValue == 'USD' && toValue == 'ETH'){
+            exchangeRateTxt.innerText = `${amountValue} ${fromValue} = ${( result['rates']['eth']['value']/ fromValueRate) * amountValue} ${toValue}`
+        }else if(fromValue == 'USD' && toValue == 'USD'){
+            exchangeRateTxt.innerText = `${amountValue} ${fromValue} = ${ amountValue} ${toValue}`
+        }else if(fromValue == 'USD' && toValue == 'BRL'){
+            exchangeRateTxt.innerText = `${amountValue} ${fromValue} = ${( dolarPrice) * amountValue} ${toValue}`
+        }else if(fromValue == 'BRL' && toValue == 'BTC'){
+            exchangeRateTxt.innerText = `${amountValue} ${fromValue} = ${( result['rates']['btc']['value']/ fromValueRate) * amountValue} ${toValue}`
+        }else if(fromValue == 'BRL' && toValue == 'ETH'){
+            exchangeRateTxt.innerText = `${amountValue} ${fromValue} = ${( result['rates']['eth']['value']/ fromValueRate) * amountValue} ${toValue}`
+        }else if(fromValue == 'BRL' && toValue == 'BRL'){
+            exchangeRateTxt.innerText = `${amountValue} ${fromValue} = ${ amountValue} ${toValue}`
+        }else if(fromValue == 'BRL' && toValue == 'USD'){
+            exchangeRateTxt.innerText = `${amountValue} ${fromValue} = ${amountValue / dolarPrice} ${toValue}`
+        }else{
+            exchangeRateTxt.innerText = `${amountValue} ${fromValue} = ${(dolarPrice * amountValue)} ${toValue}`
+        }
+
         
-        exchangeRateTxt.innerText = `${amountValue} ${fromCurrency.value} = ${(result.rate * amountValue)} ${toCurrency.value}`
+
     }).catch(()=>{
         exchangeRateTxt.innerText = "Algo deu errado!"
     })
