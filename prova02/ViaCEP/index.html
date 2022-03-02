@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>VIA CEP</title>
+</head>
+
+<body class="bg-light">
+    
+    <section class="pokemon py-2" id="home">
+        
+        <div class="wrapper">
+            <header>Buscar CEP</header>
+            <form>
+                <div class="frm-group">
+                  <label>CEP</label>
+                  <input id = "cep" type ="text" name="cep" />
+                </div>
+                
+                 <div class="frm-group">
+                    <label>Rua</label>
+                    <input id="rua" type="text" name="rua" />
+                  </div>
+                  
+                  <div class="frm-group">
+                    <label>Bairro</label>
+                    <input id="bairro" type="text" name="bairro" />
+                  </div>
+                  
+                  <div class="frm-group">
+                    <label>Cidade</label>
+                    <input id="cidade" type="text" name="cidade" />
+                  </div>
+                  
+                  <div class="frm-group">
+                    <label>Estado</label>
+                    <input id="estado" type="text" name="estado" />
+                  </div>
+              </form>
+            </form>
+        </div>
+        
+    </section>
+    <div class="loader container-lg justify-content-center">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+
+    <script src="js/script.js"></script>
+    
+</body>
+
+</html>

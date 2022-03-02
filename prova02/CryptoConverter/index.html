@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css" >
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <title>Crypto Converter | Conversor de criptomoedas</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header>Conversor de criptomoedas</header>
+        <form action="#">
+            <div class="amount">
+                <p>Digite a quantidade</p>
+                <input type="text" value="1">
+            </div>
+            <div class="drop-list">
+                <div class="from">
+                    <p>De</p>
+                    <div class="select-box">
+                        <img src="img/flags/USDT.SVG" alt="">
+                        <select name="" id="">
+                        </select>
+                    </div>
+                </div>
+                <div class="icon"><i class="fas fa-exchange-alt"></i></div>
+                <div class="to">
+                    <p>Para</p>
+                    <div class="select-box">
+                        <img src="img/flags/BTC.svg" alt="">
+                        <select name="" id="">
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="exchange-rate"></div>
+            <button>Converter</button>
+        </form>
+    </div>
+    <script src="js/crypto-list.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
