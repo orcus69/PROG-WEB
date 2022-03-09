@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Olá Humano</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="./src/css/style.css">
+  <script src="./src/js/navbar-ontop.js"></script>
+  <script src="./src/js/animate-in.js"></script>
+  <style>
+    footer #footerContent {
+      padding: 0 40px;
+      margin: 0 auto;
+      width: 100%;
+      height: 100%;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-light">
+    <div class="container">
+      <a class=" text-primary" href="#">
+        <h2><b> Olá Humano </b></h2>
+      </a>
+      <div class="navbar-collapse text-center justify-content-end collapse show" id="navbar2SupportedContent">
+        <a class="btn navbar-btn mx-2 text-dark" href="#home">Início</a>
+        <a class="btn navbar-btn mx-2 text-dark" href="#talks">Conversas</a>
+      </div>
+    </div>
+  </nav>
+  <!-- Cover -->
+  <div class="pt-5">
+    <div class="container pb-4 mt-5">
+      <div class="">
+        <section id="home">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card">
+                <form>
+                  <div class="card-body" id="posts">
+                    <div class="py-2">
+                      <h2 class="text-primary fw-bold"><b>Fale alguma coisa também!</b></h2>
+                    </div>
+
+                    <div class="row">
+                      <div class="col">
+                        <input type="text" class="form-control" id="title" placeholder="Titulo">
+                      </div>
+                      <div class="col">
+                        <input type="text" class="form-control" id="author" placeholder="autor">
+                      </div>
+                    </div>
+
+                    <div class="input-group py-2">
+                      
+                      <textarea class="form-control" aria-label="With textarea" id="content" placeholder="Lança a braba..."></textarea>
+                    </div>
+                    
+                    <div class="d-flex justify-content-end">
+                      <a class="btn navbar-btn text-white btn-primary px-4" id="createPost">Postar</a>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="row">
+          <div class="col-md-12 mt-4">
+            <h1 class="text-primary fw-bold"><b>Humanos estão falando...</b></h1>
+          </div>
+        </div>
+        <section id="talks">
+          <div class="row">
+            <div class="col-md-12 wrapper">
+              
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div id="footerContent">
+      Copyright &#169;
+      Josué Santos 2022
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" crossorigin="anonymous" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"></script>
+
+  <script type="module" src="./src/models/firabase.js" type="text/javascript"></script>
+  <script type="module" src="./src/models/firestore.js" type="text/javascript"></script>
+  <script type="module" src="./src/controllers/Posts.js" type="text/javascript"></script>
+  
+</body>
+
+</html>
