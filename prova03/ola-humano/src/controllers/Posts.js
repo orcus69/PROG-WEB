@@ -37,8 +37,8 @@ import { createPost, getPosts, deletePosts, updatePosts} from "../../src/models/
     const postsItem = document.createElement("div");
     postsItem.className = "post card bg-primary mt-4 ";
     postsItem.setAttribute("id", _id);
-    postsItem.innerHTML = ` 
-      <div class="card-header justify-content-between d-flex" contenteditable="true">
+    postsItem.innerHTML = `
+      <div class="card-header justify-content-between d-flex">
           <h2 class=""> <b>${_title}</b> </h2>
           <div class="text-white">
           <a href="#" id="edit" class="mr-2 text-white">Editar</a>
