@@ -18,8 +18,8 @@
     .naveTextColor{
       color: var(--dark-one);
     }
-    .buttonColor{
-      background-color: var(--main-color);;
+    .mainButtonColor{
+      background-color: var(--main-color);
     }
   </style>
   <title>Portfólio | Josué Santos</title>
@@ -41,10 +41,10 @@
           <a class="nav-link naveTextColor" href="#services">Serviços</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link naveTextColor" href="#portifolio">Portfólio</a>
+          <a class="nav-link naveTextColor" href="#portifolio">Projetos</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white fw-bold buttonColor" href="#home">Home</a>
+          <a class="nav-link text-white fw-bold mainButtonColor" href="#home">Home</a>
         </li>
       </ul>
     </div>
@@ -61,10 +61,11 @@
         <div class="col-md-6 mt-5 mt-md-0 order-md-first">
           <div class="home-text">
             <p class="fs-4 text-muted mb-1"> Olá, Eu sou </p>
-            <h2 class="naveTextColor fw-bold fs-4">Josué Santos, </h2> 
-            <p class="text-muted mt-4">Tenho 22 anos graduando em Ciência da computação pelo IFMA campus Caxias e técnico em informática pelo IFMA campus Codó, sou desenvolvedor Flutter apaixonado por desenvolvimento de aplicativos mobile e entusiasta tecnologias blockchain.
+            <h2 class="naveTextColor fw-bold fs-4">Josué Santos</h2> 
+            <p class="text-muted mt-4">Tenho 22 anos, sou graduando no curso Bacharelado em Ciência da computação pelo IFMA campus Caxias e técnico em informática pelo IFMA campus Codó, sou desenvolvedor Flutter apaixonado por desenvolvimento de aplicativos mobile e entusiasta tecnologias blockchain.
             </p>
-            <a class="btn px-3 mt-3 buttonColor text-white fw-bold">Baixar CV</a>
+            <a class="btn px-3 mt-3 mainButtonColor text-white fw-bold" href="assets/Currículo - Junior Flutter Developer.pdf" download="Josue-English-CV" target="_blank">Download CV</a>
+            <a class="btn px-3 mt-3 bg-secondary text-white fw-bold" href="assets/Josué Santos - Flutter Developer.pdf" download="Josue-Portuguese-CV" target="_blank">Baixar CV</a>
           </div>
         </div>
       </div>
@@ -85,7 +86,11 @@
         <div class="col-md-6 ">
           <div class="about-text">
             <h3 class="fs-4 mb-3">Desenvolvedor flutter</h3>
-            <p class="text-muted">Apaixonado por desenvolvimento mobile e entusiasta de tecnologias baseadas em blockcain.</p>
+            <p class="text-muted">
+              Apaixonado por desenvolvimento mobile e entusiasta de tecnologias baseadas em blockcain.
+              <br><br>
+              Recentemente comecei a aprender e construir Dapps com Flutter e Solidity na Ethereum Network e me apaixonei pelas possibilidades de implementar contratos inteligentes em muitos processos da vida real que não apenas em criptomoedas.
+            </p>
           </div>
 
           <div class="row text-center text-uppercase my-3">
@@ -107,9 +112,9 @@
           <div class="row">
             <div class="col-lg-12 align-items-center  mb-4">
               <div class="social-links">
-                <a class="text-dark me-4" href="https://www.facebook.com/j.santosk8"><i class="fab fa-facebook fs-2"></i></a>
-                <a class="text-dark me-4" href="https://github.com/orcus69/"><i class="fab fa-github fs-2"></i></a>
-                <a class="text-dark me-4" href="https://www.linkedin.com/in/josuessantos/"><i class="fab fa-linkedin-in fs-2"></i></a>
+                <a class="text-dark me-4" href="https://www.facebook.com/j.santosk8" target="_blank"><i class="fab fa-facebook fs-2"></i></a>
+                <a class="text-dark me-4" href="https://github.com/orcus69/" target="_blank"><i class="fab fa-github fs-2"></i></a>
+                <a class="text-dark me-4" href="https://www.linkedin.com/in/josuessantos/" target="_blank"><i class="fab fa-linkedin-in fs-2"></i></a>
               </div>
             </div>
           </div>
@@ -172,34 +177,46 @@
       <div class="row justify-content-center">
         <div class="col-lg-8">
           <div class="section-title text-center">
-            <h2 class="fw-bold mb-5">Portfólio</h2>
+            <h2 class="fw-bold mb-5">Projetos</h2>
           </div>
         </div>
       </div>´
 
       <div class="row">
-        <div class="col-md-6 col-lg-4 mb-4">
-          <div class="portifolio-item shadow-sm p-4 rounded bg-white">
-            <img src="img/portfolio/3.png" class="w-100 img-thumbnail">
-            <h3 class="text-capitalize fs-5 my-2">SADI</h3>
-            <p class="text-muted">Sistema de Acompanhamento do Discendo</p>
-            <p class="mb-4"><a class="text-decoration-none mainTextColor" href="https://github.com/orcus69/sisAcomp"><i class="text-dark fab fa-github me-2"></i>Github</a></p>
-          </div>
-        </div>
+        
         <div class="col-md-6 col-lg-4 mb-4">
           <div class="portifolio-item shadow-sm p-4 rounded bg-white">
             <img src="img/portfolio/1.png" class="w-100 img-thumbnail">
             <h3 class="text-capitalize fs-5 my-2">Lightning Loterry</h3>
             <p class="text-muted">Loteria baseadas na Lightning Network</p>
-            <p class="mb-4"><a class="text-decoration-none mainTextColor" href="https://github.com/orcus69/lightning_lotery"><i class="text-dark fab fa-github me-2"></i>Github</a></p>
+            <p class="mb-4"><a class="text-decoration-none mainTextColor" href="https://github.com/orcus69/lightning_lotery" target="_blank"><i class="text-dark fab fa-github me-2"></i>Github</a></p>
           </div>
         </div>
+
         <div class="col-md-6 col-lg-4 mb-4">
           <div class="portifolio-item shadow-sm p-4 rounded bg-white">
             <img src="img/portfolio/2.png" class="w-100 img-thumbnail">
             <h3 class="text-capitalize fs-5 my-2">Human Talk</h3>
             <p class="text-muted">Rede social baseada no tumblr</p>
-            <p class="mb-4"><a class="text-decoration-none mainTextColor" href="https://github.com/orcus69/humanTalk-Flutter"><i class="text-dark fab fa-github me-2"></i>Github</a></p>
+            <p class="mb-4"><a class="text-decoration-none mainTextColor" href="https://github.com/orcus69/humanTalk-Flutter" target="_blank"><i class="text-dark fab fa-github me-2"></i>Github</a></p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="portifolio-item shadow-sm p-4 rounded bg-white">
+            <img src="img/portfolio/4.png" class="w-100 img-thumbnail">
+            <h3 class="text-capitalize fs-5 my-2">Greape Trade</h3>
+            <p class="text-muted">Plataforma de envio de Ether usando Flutter e Smart Contract</p>
+            <p class="mb-4"><a class="text-decoration-none mainTextColor" href="https://github.com/orcus69/solidity-projects/tree/main/PRACTICE/greapetrade" target="_blank"><i class="text-dark fab fa-github me-2"></i>Github</a></p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="portifolio-item shadow-sm p-4 rounded bg-white">
+            <img src="img/portfolio/3.png" class="w-100 img-thumbnail">
+            <h3 class="text-capitalize fs-5 my-2">SADI</h3>
+            <p class="text-muted">Sistema de Acompanhamento do Discendo</p>
+            <p class="mb-4"><a class="text-decoration-none mainTextColor" href="https://github.com/orcus69/sisAcomp" target="_blank"><i class="text-dark fab fa-github me-2"></i>Github</a></p>
           </div>
         </div>
       </div>
@@ -210,7 +227,7 @@
     <div class="container-lg">
       <div class="row">
         <div class="col-lg-12">
-          <p class="m-0 text-center text-muted">Copyright &copy; 2022 Todos os direitos reservados | <a class="text-dark me-4 text-decoration-none" href="https://www.linkedin.com/in/josuessantos/">Josué Santos</a></p>
+          <p class="m-0 text-center text-muted">Copyright &copy; 2022 Todos os direitos reservados | <a class="text-dark me-4 text-decoration-none" href="https://www.linkedin.com/in/josuessantos/" target="_blank">Josué Santos</a></p>
         </div>
       </div>
     </div>
